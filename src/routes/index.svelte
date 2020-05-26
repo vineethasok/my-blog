@@ -13,9 +13,10 @@
 </script>
 
 <style>
-  :global(main){
+  :global(main) {
     padding-top: 0 !important;
   }
+
   section:not(.qualification) {
     background-color: white;
     color: #8b4513;
@@ -30,7 +31,7 @@
     padding-top: 3rem;
   }
 
-  section > div {
+  section>div {
     width: 100%;
   }
 
@@ -48,6 +49,7 @@
     padding: 0.5rem;
     border-radius: 10px;
   }
+
   .social-icons svg:hover {
     width: 2rem;
     fill: #bf7e68;
@@ -56,10 +58,10 @@
   }
 
   #intro {
-   background-color: #4c241d;
-   color: white;
-   position: relative;
-   padding-bottom: 0;
+    background-color: #4c241d;
+    color: white;
+    position: relative;
+    padding-bottom: 0;
   }
 
   #intro::after {
@@ -160,10 +162,30 @@
     top: 1rem;
   }
 
+  .timeline .content ul {
+    list-style-type: circle;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .timeline .content ul::before {
+    content: "Technologies Used";
+    width: 100%;
+    padding: 0;
+    font-weight: 700;
+  }
+
+
+  .timeline .content ul li {
+    width: 100%;
+  }
+
+
   .qualification .timeline-content {
     display: flex;
     flex-direction: column;
     max-width: 80%;
+    align-items: center;
   }
 
   .qualification .timeline:nth-child(odd) .timeline-content {
@@ -179,7 +201,7 @@
   }
 
   .qualification .timeline-year {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 600;
     display: flex;
     flex-direction: column;
@@ -335,16 +357,43 @@
     color: #4c241d;
   }
 
+  .flex-grow {
+    flex-grow: 1;
+  }
+
   @media (min-width: 768px) {
     section:not(.qualification)>div {
       width: 50%;
     }
 
+    .timeline .content ul {
+      flex-wrap: wrap;
+      flex-direction: row;
+    }
+
+    .timeline .content ul::before {
+      padding-left: 30%;
+    }
+
+
+    .timeline .content ul li {
+      width: 33%;
+    }
+
     .qualification .timeline-content {
       flex-direction: row;
-      margin-left: 0 !important;
-      margin-right: 0 !important;
     }
+
+    .qualification .timeline:nth-child(odd) .timeline-content {
+      margin-left: 0 !important;
+      margin-right: auto;
+    }
+
+    .qualification .timeline:nth-child(even) .timeline-content {
+      margin-right: 0 !important;
+      margin-left: auto;
+    }
+
 
     .qualification .timeline-year,
     .qualification .content {
@@ -371,7 +420,7 @@
 
 <section id="intro">
   <div class="">
-    <p>I'm Vineeth Asok</p>
+    <h1>I'm Vineeth Asok</h1>
     <p class="text-gray-700 text-base">I currently work as a Remote Full-Stack Developer for Seabookings, a Portuguese
       Marine Tourism Company.</p>
     <p class="text-gray-700 text-base">I have an interest in Web Development and this is one of a way which I wish to
@@ -430,13 +479,26 @@
           <use xlink:href="fa.svg#laptop-code"></use>
         </svg>
         <div>2019 - Present</div>
+        <h2>Full-Stack Developer</h2>
       </div>
       <div class="content">
-        <h3 class="title">Seabookings</h3>
+        <h3 class="title">Seabookings (Remote)</h3>
         <p class="description">
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-          standard dummy text ever since the 1500s.
+          I'm working for this organization for the past 1 year.<br>
+          My main responsibility include helping the team converting design to UI and developing features for both customer and admin for the ecommerce platform.<br>
+          I was able to integrate Bokun API with the product and converting UI which was designed in Indesign to code while writing test case to support the login
         </p>
+        <ul>
+          <li>Ruby on rails</li>
+          <li>VueJs</li>
+          <li>NustJS</li>
+          <li>PostgreSQL</li>
+          <li>Redis</li>
+          <li>Heroku</li>
+          <li>Rspec</li>
+          <li>REST API</li>
+        </ul>
+        <a href="https://www.seabookings.com/" class="btn">View Project</a>
       </div>
     </div>
   </div>
@@ -447,13 +509,26 @@
           <use xlink:href="fa.svg#laptop-code"></use>
         </svg>
         <div>2016 - 2019</div>
+        <h2>Full-Stack Developer</h2>
       </div>
       <div class="content">
         <h3 class="title">Zoho Corporation</h3>
         <p class="description">
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-          standard dummy text ever since the 1500s.
+          I had been part of O365ManagerPlus, a ManageEngine Based product in Zoho Corporation.<br>
+          I was part of a team of 6 which later became 10 members.<br>
+          The main responsility I handled where developing functionalities (Mostly Reports section),
+           and had the responsibility of communicating with the design team
         </p>
+        <ul>
+          <li>Java</li>
+          <li>EmberJs v1.13</li>
+          <li>PostgreSQL</li>
+          <li>MySQL</li>
+          <li>Powershell</li>
+          <li>REST API</li>
+          <li class="flex-grow">Office365 Commandlets</li>
+        </ul>
+        <a href="https://demo.o365managerplus.com/webclient/index.html" class="btn">View Project</a>
       </div>
     </div>
   </div>
@@ -464,12 +539,14 @@
           <use xlink:href="fa.svg#graduation-cap"></use>
         </svg>
         <div>2011 - 2016</div>
+        <h2>MS Software Engineering</h2>
       </div>
       <div class="content">
-        <h3 class="title">MS SOFTWARE ENGINEERING</h3>
+        <h3 class="title">VIT University</h3>
         <p class="description">
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-          standard dummy text ever since the 1500s.
+          I completed my degree in Software Engineering from Vellore Institute of
+          technology after learning the fundamentals of Software Engineering and Design Concepts.<br>
+          I had the oppurtunity to learn multiple languages and Concepts of Software Architecture with the help of my Talend professors and fellow students.
         </p>
       </div>
     </div>

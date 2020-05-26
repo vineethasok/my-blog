@@ -65,6 +65,15 @@ code {
 
 .javascript-the-jack-of-all-trades {
 	background: url("/images/jack-of-all-trades.jpg");
+}
+
+.javascript-the-jack-of-all-trades.cover-image {
+	background: linear-gradient(
+			0deg,
+		rgba(191, 126, 104, 0.39),
+		rgba(191, 126, 104, 0.39)
+		),
+		url("/images/jack-of-all-trades.jpg");
 	background-position: left;
 }
 
@@ -72,12 +81,39 @@ code {
 	background: url("/images/pwa.png");
 }
 
+.too-many-apps-but-too-little-space-pwa-to-the-rescue.cover-image {
+	background: linear-gradient(
+			0deg,
+		rgba(191, 126, 104, 0.39),
+		rgba(191, 126, 104, 0.39)
+		),
+		url("/images/pwa.png");
+}
+
 .is-rs-99-hosting-totally-worth {
 	background: url("/images/server.jpg");
 }
 
+.is-rs-99-hosting-totally-worth.cover-image {
+	background: linear-gradient(
+			0deg,
+		rgba(191, 126, 104, 0.39),
+		rgba(191, 126, 104, 0.39)
+		),
+		url("/images/server.jpg");
+}
+
 .current-destination-seabookings {
 	background: url("/images/seabookings.png");
+}
+
+.current-destination-seabookings.cover-image {
+	background: linear-gradient(
+			0deg,
+		rgba(191, 126, 104, 0.39),
+		rgba(191, 126, 104, 0.39)
+		),
+		url("/images/seabookings.png");
 }
 
 footer {

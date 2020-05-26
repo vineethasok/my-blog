@@ -19,14 +19,10 @@
 </script>
 
 <style>
-	/*
-		By default, CSS is locally scoped to the component,
-		and any unused styles are dead-code-eliminated.
-		In this page, Svelte can't know which elements are
-		going to appear inside the {{{post.html}}} block,
-		so we have to use the :global(...) modifier to target
-		all elements inside .content
-	*/
+	:global(main) {
+		padding: 0 2em !important;
+	}
+
 	.content {
 		margin: 6rem 2rem;
 		font-size: 1.4em;
@@ -110,7 +106,7 @@
 	.cover-image {
 		position: relative;
 		height: 400px;
-		margin: -2em;
+		margin: 0 -2em;
 		background-repeat: no-repeat;
 		background-attachment: fixed;
 		background-position: center;
