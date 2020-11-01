@@ -2,7 +2,7 @@
 title: 'Undeniable Signs You Took The Wrong Job'
 slug: 'undeniable-signs-you-took-the-wrong-job'
 date: '31-10-2020'
-author: 'Artur Meyster'
+author: 'Artur Meyster (Founder of Career Karma)'
 tags: ['SeaBookings']
 ---
 
