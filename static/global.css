@@ -116,6 +116,19 @@ code {
 		url("/images/seabookings.png");
 }
 
+.undeniable-signs-you-took-the-wrong-job {
+	background: url("/images/undeniable-signs-you-took-the-wrong-job.jpg");
+}
+
+.undeniable-signs-you-took-the-wrong-job.cover-image {
+	background: linear-gradient(
+			0deg,
+		rgba(191, 126, 104, 0.39),
+		rgba(191, 126, 104, 0.39)
+		),
+		url("/images/undeniable-signs-you-took-the-wrong-job.jpg");
+}
+
 footer {
 	text-align: center;
 	padding: 1rem;

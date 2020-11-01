@@ -125,6 +125,7 @@
 	</div>
 	<div class="cover-title">
 		<h1>{post.title}</h1>
+		<h3>- {post.author}</h3>
 		<h4>
 			<svg>
 			<use xlink:href="fa.svg#clock"></use>
