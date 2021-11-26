@@ -44,7 +44,7 @@
       <div class="flex justify-center sm:block">
         <a
           download="Stoman-Resume.pdf"
-          href="/files/Stoman-Resume.pdf"
+          href="https://drive.google.com/file/d/1-kwcELdM-dJ0a5UqclGBrxWxwfLIvuR3/view?usp=sharing"
           class="
             flex
             justify-center
