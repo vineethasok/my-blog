@@ -3,6 +3,7 @@
     <div
       class="
         bg-white
+        dark:bg-gray-800
         sm:bg-transparent
         block
         flex
@@ -22,7 +23,7 @@
             Vineeth Asok Kumar
             <i
               data-feather="pen-tool"
-              class="text-black absolute top-1/2 left-full"
+              class="text-black dark:text-gray-100 absolute top-1/2 left-full"
               height="20"
               width="20"
             ></i>
@@ -33,10 +34,10 @@
         :class="isOpen ? 'block' : 'hidden'"
         class="
           bg-white
+          dark:bg-gray-800
           sm:bg-transparent
           m-0
-          sm:ml-4
-          sm:mt-3 sm:flex
+          sm:ml-4 sm:mt-3 sm:flex
           p-5
           sm:p-0
           justify-center
@@ -49,28 +50,21 @@
           left-0
           top-10
           sm:w-auto
-        backdrop-filter backdrop-blur-xl
-        bg-opacity-60
-        sm:top-auto
-        sm:left-auto
+          backdrop-filter backdrop-blur-xl
+          bg-opacity-90
+          sm:top-auto sm:left-auto
         "
       >
-        <router-link
-          to="/#about-me"
-          class="nav-items"
-          aria-label="About Me"
+        <router-link to="/#about-me" class="nav-items" aria-label="About Me"
           >About Me</router-link
         >
-        <router-link
-          to="/#timeline"
-          class="nav-items"
-          aria-label="Projects"
+        <router-link to="/#timeline" class="nav-items" aria-label="Projects"
           >Timeline</router-link
         >
-        <a href="javascript:void(Tawk_API.toggle())" class="nav-items">Contact</a>
-        <router-link to="/blog" class="nav-items">
-          Blog
-        </router-link>
+        <a href="javascript:void(Tawk_API.toggle())" class="nav-items"
+          >Contact</a
+        >
+        <router-link to="/blog" class="nav-items"> Blog </router-link>
       </div>
       <!-- Header links end -->
 
