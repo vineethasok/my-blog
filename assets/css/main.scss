@@ -1,0 +1,35 @@
+body {
+  @apply font-montserrat text-gray-900 dark:text-gray-100 transition-all duration-500 overflow-x-hidden;
+}
+
+* {
+  user-select: none;
+}
+
+section {
+  @apply p-2;
+  
+  @screen md {
+    padding: initial;
+  }
+}
+
+.javascript-the-jack-of-all-trades {
+	background: url("assets/images/javascript-the-jack-of-all-trades.png");
+}
+
+.too-many-apps-but-too-little-space-pwa-to-the-rescue {
+	background: url("assets/images/too-many-apps-but-too-little-space-pwa-to-the-rescue.png");
+}
+
+.is-rs-99-hosting-totally-worth {
+	background: url("assets/images/is-rs-99-hosting-totally-worth.png");
+}
+
+.current-destination-seabookings {
+	background: url("assets/images/current-destination-seabookings.png");
+}
+
+.undeniable-signs-you-took-the-wrong-job {
+	background: url("assets/images/undeniable-signs-you-took-the-wrong-job.png");
+}
