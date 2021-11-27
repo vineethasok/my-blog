@@ -11,10 +11,68 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Vineeth Asok Kumar\'s Portfolio' },
-      { name: 'format-detection', content: 'telephone=no' }
+      { hid: 'title', name: 'title', content: 'Vineeth Asok Kumar\'s Portfolio' },
+      { hid: 'description', name: 'description', content: 'Vineeth Asok Kumar\'s Portfolio. Vineeth Asok Kumar is a polyglot developer who yearns to keep uptodate and get to know programming concepts more' },
+      { name: 'format-detection', content: 'telephone=no' },
+      
+      {
+        hid: 'description',
+        name: 'description',
+        content:
+         'Vineeth Asok Kumar\'s Portfolio. Vineeth Asok Kumar is a polyglot developer who yearns to keep uptodate and get to know programming concepts more'
+      },
+      {
+        hid: 'twitter:title',
+        name: 'twitter:title',
+        content: 'Vineeth Asok Kumar\'s Portfolio',
+      },
+      {
+        hid: 'twitter:description',
+        name: 'twitter:description',
+        content:'Vineeth Asok Kumar\'s Portfolio. Vineeth Asok Kumar is a polyglot developer who yearns to keep uptodate and get to know programming concepts more',
+      },
+      {
+        hid: 'twitter:image',
+        name: 'twitter:image',
+        content: '/website.png',
+      },
+      {
+        hid: 'twitter:image:alt',
+        name: 'twitter:image:alt',
+        content: 'Vineeth Asok Kumar\'s Portfolio',
+      },
+      {
+        hid: 'og:title',
+        property: 'og:title',
+        content: 'Vineeth Asok Kumar\'s Portfolio',
+      },
+      {
+        hid: 'og:description',
+        property: 'og:description',
+        content:'Vineeth Asok Kumar\'s Portfolio. Vineeth Asok Kumar is a polyglot developer who yearns to keep uptodate and get to know programming concepts more',
+      },
+      {
+        hid: 'og:image',
+        property: 'og:image',
+        content: '/website.png',
+      },
+      {
+        hid: 'og:image:secure_url',
+        property: 'og:image:secure_url',
+        content: '/website.png',
+      },
+      {
+        hid: 'og:image:alt',
+        property: 'og:image:alt',
+        content: 'Vineeth Asok Kumar\'s Portfolio',
+      },
     ],
     link: [
+      {
+        hid: "canonical",
+        rel: "canonical",
+        href: "https://vineethasok.com",
+      },
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css' }
     ],

@@ -4,7 +4,10 @@
       <div class="header-container">
         <div class="relative h-full w-full">
           <img :src="article.imgSrc" class="" />
-          <h1>{{ article.title }}</h1>
+          <div class="header">
+            <h1>{{ article.title }}</h1>
+            <h3 class="text-sm">- {{ article.author }}</h3>
+          </div>
           <div class="header-subcontainer">
             <h3>{{ article.date }}</h3>
             <SocialShare :title="article.title" />
@@ -29,6 +32,59 @@ export default {
   head() {
     return {
       title: this.article.title,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content:
+            `Read more about ${this.article.title}`
+        },
+        {
+          hid: 'twitter:title',
+          name: 'twitter:title',
+          content: this.article.title,
+        },
+        {
+          hid: 'twitter:description',
+          name: 'twitter:description',
+          content: `Read more about ${this.article.title}`,
+        },
+        {
+          hid: 'twitter:image',
+          name: 'twitter:image',
+          content: this.article.imgSrc,
+        },
+        {
+          hid: 'twitter:image:alt',
+          name: 'twitter:image:alt',
+          content: this.article.title,
+        },
+        {
+          hid: 'og:title',
+          property: 'og:title',
+          content: this.article.title,
+        },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content: `Read more about ${this.article.title}`,
+        },
+        {
+          hid: 'og:image',
+          property: 'og:image',
+          content: this.article.imgSrc,
+        },
+        {
+          hid: 'og:image:secure_url',
+          property: 'og:image:secure_url',
+          content: this.article.imgSrc,
+        },
+        {
+          hid: 'og:image:alt',
+          property: 'og:image:alt',
+          content: this.article.title,
+        },
+      ],
     }
   },
 }
@@ -62,10 +118,14 @@ export default {
       @apply h-full w-full object-cover;
     }
 
-    h1 {
-      @apply absolute top-0 font-bold text-blue-400 dark:text-white text-2xl mb-2 p-4;
-
-      text-shadow: 2px 2px 4px #000;
+    .header{
+      @apply absolute top-0 font-bold text-blue-400 dark:text-white mb-2 p-4;
+      h1 {
+        @apply text-2xl mb-2;
+      }
+      * {
+        text-shadow: 2px 2px 4px #000;
+      }
     }
     .header-subcontainer {
       @apply absolute inset-x-0 bottom-0 mb-1;
@@ -93,10 +153,12 @@ export default {
       img {
         @apply w-full object-cover;
       }
-      h1 {
+      .header {
         @apply relative bottom-auto;
 
-        text-shadow: none;
+        * {
+          text-shadow: none;
+        }
       }
       .header-subcontainer {
         @apply relative bottom-auto;
