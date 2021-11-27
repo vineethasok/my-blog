@@ -3,7 +3,7 @@
     <div>
       <div class="header-container">
         <div class="relative h-full w-full">
-          <img :src="article.imgSrc" class="" />
+          <img :src="article.imgSrc" alt="Post Image" />
           <div class="header">
             <h1>{{ article.title }}</h1>
             <h3 class="text-sm">- {{ article.author }}</h3>
@@ -94,7 +94,7 @@ export default {
 .post-container {
   @apply min-h-screen;
 
-  article {
+  ::v-deep article {
     @apply max-w-screen-lg mx-auto p-4;
 
     h1 {

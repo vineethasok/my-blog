@@ -4,15 +4,7 @@
     <AboutMe />
     <Skills />
     <Timeline />
-    <back-to-top
-      visibleoffset="500"
-      right="40px"
-      bottom="40px"
-      class="shadow-lg"
-    >
-      <PostList :posts="posts" title="Recent Posts" />
-      <i data-feather="arrow-up"></i>
-    </back-to-top>
+    <PostList :posts="posts" title="Recent Posts" />
   </div>
 </template>
 

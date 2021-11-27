@@ -16,7 +16,8 @@
     "core-js": "^3.15.1",
     "feather-icons": "^4.28.0",
     "nuxt": "^2.15.7",
-    "sass": "^1.43.4"
+    "sass": "^1.43.4",
+    "vue-backtotop": "^1.6.1"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.14.7",

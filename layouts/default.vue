@@ -3,11 +3,19 @@
     <Navigation />
     <Nuxt />
 		<Footer />
+    <BackToTop
+      visibleoffset="500"
+      right="auto"
+      bottom="40px"
+      class="shadow-lg"
+    >
+      <i data-feather="arrow-up"></i>
+    </BackToTop>
   </div>
 </template>
 <style>
 .va-container {
-	@apply pt-0.5 mx-auto bg-blend-multiply bg-white bg-white dark:bg-gray-800;
+	@apply pt-0.5 mr-auto bg-blend-multiply bg-white bg-white dark:bg-gray-800;
 
   background-image: url("assets/background.png");; 
 }
@@ -19,11 +27,7 @@
 }
 
 .vue-back-to-top {
-	@apply p-2 sm:p-4 bg-indigo-500 hover:bg-indigo-600 text-white;
-
-	border-radius: 50%;
-	font-size: 22px;
-	line-height: 22px;
+	@apply p-2 sm:p-4 bg-indigo-500 hover:bg-indigo-600 text-white rounded-full ml-2;
 }
 
 .fade-enter-active {

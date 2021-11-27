@@ -14,7 +14,12 @@
             class="language"
           >
             <span class="skill-box" :class="skillCategory">
-              <i class="devicon-icon" :class="skillValue.icon"></i>
+              <i
+                class="devicon-icon"
+                :class="skillValue.icon"
+                v-if="skillValue.icon"
+              ></i>
+              <i v-else class="devicon-icon" data-feather="repeat"></i>
               {{ skillValue.name }}
             </span>
           </div>
@@ -36,44 +41,44 @@ export default defineComponent({
           list: [
             {
               name: 'Svelte',
-              icon: 'devicon-svelte-plain'
+              icon: 'devicon-svelte-plain',
             },
             {
               name: 'VueJs',
-              icon: 'devicon-vuejs-plain'
+              icon: 'devicon-vuejs-plain',
             },
             {
               name: 'EmberJs',
-              icon: 'devicon-ember-original-wordmark'
+              icon: 'devicon-ember-original-wordmark',
             },
             {
               name: 'ReactJs',
-              icon: 'devicon-react-plain'
+              icon: 'devicon-react-plain',
             },
             {
               name: 'Redux',
-              icon: 'devicon-redux-plain'
+              icon: 'devicon-redux-plain',
             },
             {
               name: 'HTML5',
-              icon: 'devicon-html5-plain'
+              icon: 'devicon-html5-plain',
             },
             {
               name: 'CSS3',
-              icon: 'devicon-css3-plain'
+              icon: 'devicon-css3-plain',
             },
             {
               name: 'SASS/ SCSS',
-              icon: 'devicon-sass-plain'
+              icon: 'devicon-sass-plain',
             },
             {
               name: 'Javascript',
-              icon: 'devicon-javascript-plain'
+              icon: 'devicon-javascript-plain',
             },
             {
               name: 'jQuery',
-              icon: 'devicon-jquery-plain'
-            }
+              icon: 'devicon-jquery-plain',
+            },
           ],
         },
         backend: {
@@ -81,23 +86,22 @@ export default defineComponent({
           list: [
             {
               name: 'Java',
-              icon: 'devicon-java-plain'
+              icon: 'devicon-java-plain',
             },
             {
               name: 'Python',
-              icon: 'devicon-python-plain'
+              icon: 'devicon-python-plain',
             },
             {
               name: 'Node JS',
-              icon: 'devicon-nodejs-plain'
+              icon: 'devicon-nodejs-plain',
             },
             {
               name: 'Ruby on Rails',
-              icon: 'devicon-rails-plain'
+              icon: 'devicon-rails-plain',
             },
             {
-              name: 'REST API',
-              icon: 'devicon-digitalocean-plain'
+              name: 'API',
             },
           ],
         },
@@ -106,11 +110,11 @@ export default defineComponent({
           list: [
             {
               name: 'PostgreSql',
-              icon: 'devicon-postgresql-plain'
+              icon: 'devicon-postgresql-plain',
             },
             {
               name: 'MySQL',
-              icon: 'devicon-mysql-plain'
+              icon: 'devicon-mysql-plain',
             },
           ],
         },
@@ -119,15 +123,15 @@ export default defineComponent({
           list: [
             {
               name: 'Git',
-              icon: 'devicon-git-plain'
+              icon: 'devicon-git-plain',
             },
             {
               name: 'AWS',
-              icon: 'devicon-amazonwebservices-plain'
+              icon: 'devicon-amazonwebservices-plain',
             },
             {
               name: 'DigitalOcean',
-              icon: 'devicon-digitalocean-plain'
+              icon: 'devicon-digitalocean-plain',
             },
           ],
         },
@@ -181,7 +185,7 @@ export default defineComponent({
 
     .devicon-icon {
       @apply w-20 h-20 text-white dark:text-gray-900;
-       &::before {
+      &::before {
         @apply text-6xl;
       }
     }

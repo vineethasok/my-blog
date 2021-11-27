@@ -15,7 +15,7 @@
         </div>
         <div class="timeline-event-sidebar">
           <div class="flex flex-col items-center">
-            <img :src="bio.orgSvg" class="h-16" />
+            <img :src="bio.orgSvg" class="timeline-logo" />
             <div class="mt-4 text-sm">{{ bio.period }}</div>
           </div>
 
@@ -179,6 +179,10 @@ export default {
 .timeline {
   @apply flex relative flex-col py-20 z-10 bg-opacity-50 bg-gray-200 dark:bg-gray-500;
   @apply self-center flex-col;
+
+  &-logo {
+    @apply h-16;
+  }
 
   &::after {
     @apply absolute inset-0 opacity-75;

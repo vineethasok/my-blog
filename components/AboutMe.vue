@@ -11,7 +11,7 @@
       </div>
       <div class="card-body">
         <div class="w-full sm:w-1/4 mb-7 sm:mb-0">
-          <img src="/vinu.jpg" class="rounded-full w-96" alt="" />
+          <img src="/vinu.jpg" class="photo" alt="Photo of Vineeth Asok Kumar" />
         </div>
         <div class="w-full sm:w-3/4 text-left dark:text-white">
           <br />
@@ -52,6 +52,11 @@
   .round {
     @apply w-4 h-4 mr-2 rounded-full;
   }
+
+  .photo {
+    @apply rounded-full w-96;
+  }
+  
   .card {
     @apply shadow-2xl p-0 mx-4 max-w-screen-lg mx-auto;
 
