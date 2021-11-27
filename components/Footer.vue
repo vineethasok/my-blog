@@ -4,7 +4,7 @@
       Vineeth Asok Kumar
       <i
         data-feather="pen-tool"
-        class="text-black absolute top-1/2 left-full"
+        class="text-black dark:text-gray-100 absolute top-1/2 left-full"
         height="20"
         width="20"
       ></i>
