@@ -2,7 +2,7 @@
 title: 'Javascript-The Jack of all Trades'
 slug: 'javascript-the-jack-of-all-trades'
 date: '14-01-2019'
-author: 'Vineeth Asokkumar'
+author: 'Vineeth Asok Kumar'
 tags: ['Jack of All trades','Javascript','Use of Javascript','Why Javascript']
 ---
 

@@ -2,7 +2,7 @@
 title: 'Current Destination – SeaBookings'
 slug: 'current-destination-seabookings'
 date: '29-07-2019'
-author: 'Vineeth Asokkumar'
+author: 'Vineeth Asok Kumar'
 tags: ['SeaBookings']
 ---
 

@@ -2,7 +2,7 @@
 title: 'Too many apps but too little space? PWA to the rescue.'
 slug: 'too-many-apps-but-too-little-space-pwa-to-the-rescue'
 date: '21-01-2019'
-author: 'Vineeth Asokkumar'
+author: 'Vineeth Asok Kumar'
 tags: ['Cross Native Applications', 'ProgressiveWebApp', 'Progrssive Web App', 'Why Javascript', 'Web Development']
 ---
 

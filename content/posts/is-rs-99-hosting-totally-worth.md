@@ -1,7 +1,7 @@
 ---
 title: 'Is Rs 99 Hosting totally worth?'
 slug: 'is-rs-99-hosting-totally-worth'
-author: 'Vineeth Asokkumar'
+author: 'Vineeth Asok Kumar'
 date: '28-01-2019'
 ---
 
