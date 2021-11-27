@@ -3,7 +3,7 @@ title: 'Undeniable Signs You Took The Wrong Job'
 slug: 'undeniable-signs-you-took-the-wrong-job'
 date: '31-10-2020'
 author: 'Artur Meyster (Founder of Career Karma)'
-tags: ['SeaBookings']
+tags: ['Career Karma']
 ---
 
 Sometimes, during the job-searching path, most jobs seem like a dream job. But, when you start working, there are a few signs that might tell you that you’re in the wrong place. Because of the increasing demand for tech workers, employers are doing everything they can to attract skilled candidates’ attention. Still, some companies don’t practice what they preach. Feeling comfortable at work and enjoying what you do is key to achieving happiness in life. Given that, you must land a position that allows you to improve your wellness. It will help you to have a healthier and happier life.
