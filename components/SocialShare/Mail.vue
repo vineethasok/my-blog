@@ -33,7 +33,7 @@ export default defineComponent({
   setup(props) {
     const route = useRoute()
     return {
-      currentUrl: `mailto:?subject=${props.title}&body=${route.value.fullPath}`,
+      currentUrl: `mailto:?subject=${props.title}&body=https://www.vineethasok.com${route.value.path}`,
     }
   },
 })

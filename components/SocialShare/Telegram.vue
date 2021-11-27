@@ -38,7 +38,7 @@ export default defineComponent({
   setup(props) {
     const route = useRoute()
     return {
-      currentUrl: `https://telegram.me/share/url?text=${props.title}&url=${route.value.fullPath}`
+      currentUrl: `https://telegram.me/share/url?text=${props.title}&url=https://www.vineethasok.com${route.value.path}`
     };
   }
 })

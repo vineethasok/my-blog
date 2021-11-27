@@ -34,7 +34,7 @@ export default defineComponent({
   setup(props) {
     const route = useRoute()
     return {
-      currentUrl: `https://facebook.com/sharer/sharer.php?u=${route.value.fullPath}`
+      currentUrl: `https://facebook.com/sharer/sharer.php?u=https://www.vineethasok.com${route.value.path}`
     };
   }
 })

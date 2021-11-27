@@ -10,7 +10,7 @@
       bottom="40px"
       class="shadow-lg"
     >
-    <PostList :posts="posts" title='Recent Posts' />
+      <PostList :posts="posts" title="Recent Posts" />
       <i data-feather="arrow-up"></i>
     </back-to-top>
   </div>
@@ -21,14 +21,19 @@ import Vue from 'vue'
 import PostList from '~/components/PostList.vue'
 
 export default Vue.extend({
-    async asyncData({ $content }) {
-        const posts = await $content("posts")
-            .sortBy("date", "desc")
-            .only(["title", "slug", "date"])
-            .limit(3)
-            .fetch();
-        return { posts };
-    },
-    components: { PostList }
+  async asyncData({ $content }) {
+    const posts = await $content('posts')
+      .sortBy('date', 'desc')
+      .only(['title', 'slug', 'date'])
+      .limit(3)
+      .fetch()
+    return { posts }
+  },
+  components: { PostList },
+  head() {
+    return {
+      title: 'Vineeth Asok Kumar',
+    }
+  },
 })
 </script>

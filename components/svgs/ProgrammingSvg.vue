@@ -522,7 +522,7 @@
 
 <style lang='scss' scoped>
 line {
-  stroke-dasharray: 4 1 2 3;
+  stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
   @apply text-green-100 animate-dash;
 

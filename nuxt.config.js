@@ -15,7 +15,8 @@ export default {
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css' }
     ],
     script: [
       { hid: 'tawk', src: 'https://embed.tawk.to/618fd1746bb0760a494274f8/1fkcskbug', defer: true }
@@ -29,6 +30,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    '~/plugins/animateOnScroll.ts',
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -64,8 +66,5 @@ export default {
     classPrefix: '',
     classSuffix: '',
     storageKey: 'nuxt-color-mode'
-  },
-  server: {
-    port: 3005 // default: 3000
   }
 }

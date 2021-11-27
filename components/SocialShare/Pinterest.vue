@@ -37,7 +37,7 @@ export default defineComponent({
   setup(props) {
     const route = useRoute()
     return {
-      currentUrl: `https://pinterest.com/pin/create/button/?url=${route.value.fullPath}&media=${route.value.fullPath}&description=${props.title}`,
+      currentUrl: `https://pinterest.com/pin/create/button/?url=https://www.vineethasok.com${route.value.path}&media=https://www.vineethasok.com${route.value.path}&description=${props.title}`,
     }
   },
 })

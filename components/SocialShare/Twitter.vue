@@ -33,7 +33,7 @@ export default defineComponent({
   setup(props) {
     const route = useRoute()
     return {
-      currentUrl: `https://twitter.com/intent/tweet/?text=${props.title}&url=${route.value.fullPath}`,
+      currentUrl: `https://twitter.com/intent/tweet/?text=${props.title}&url=https://www.vineethasok.com${route.value.path}`,
     };
   },
 })

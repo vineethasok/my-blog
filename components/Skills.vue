@@ -1,9 +1,7 @@
 <template>
   <section class="skills-container">
     <div class="flex flex-col sm:flex-row z-10">
-      <div class="header">
-        Skills
-        </div>
+      <div class="header">Skills</div>
       <div class="skill-list">
         <div
           v-for="(skill, skillCategory) in skills"
@@ -12,12 +10,13 @@
         >
           <div
             v-for="skillValue in skill.list"
-            :key="skillValue"
+            :key="skillValue.name"
             class="language"
           >
-            <span class="skill-box" :class="skillCategory">{{
-              skillValue
-            }}</span>
+            <span class="skill-box" :class="skillCategory">
+              <i class="devicon-icon" :class="skillValue.icon"></i>
+              {{ skillValue.name }}
+            </span>
           </div>
         </div>
       </div>
@@ -35,29 +34,102 @@ export default defineComponent({
         frontend: {
           label: 'Frontend',
           list: [
-            'Svelte',
-            'VueJs',
-            'EmberJs',
-            'ReactJs',
-            'Redux',
-            'HTML5',
-            'CSS3',
-            'SASS/ SCSS',
-            'Javascript',
-            'jQuery',
+            {
+              name: 'Svelte',
+              icon: 'devicon-svelte-plain'
+            },
+            {
+              name: 'VueJs',
+              icon: 'devicon-vuejs-plain'
+            },
+            {
+              name: 'EmberJs',
+              icon: 'devicon-ember-original-wordmark'
+            },
+            {
+              name: 'ReactJs',
+              icon: 'devicon-react-plain'
+            },
+            {
+              name: 'Redux',
+              icon: 'devicon-redux-plain'
+            },
+            {
+              name: 'HTML5',
+              icon: 'devicon-html5-plain'
+            },
+            {
+              name: 'CSS3',
+              icon: 'devicon-css3-plain'
+            },
+            {
+              name: 'SASS/ SCSS',
+              icon: 'devicon-sass-plain'
+            },
+            {
+              name: 'Javascript',
+              icon: 'devicon-javascript-plain'
+            },
+            {
+              name: 'jQuery',
+              icon: 'devicon-jquery-plain'
+            }
           ],
         },
         backend: {
           label: 'Backend',
-          list: ['Java', 'Python', 'Node JS', 'Ruby on Rails', 'REST API'],
+          list: [
+            {
+              name: 'Java',
+              icon: 'devicon-java-plain'
+            },
+            {
+              name: 'Python',
+              icon: 'devicon-python-plain'
+            },
+            {
+              name: 'Node JS',
+              icon: 'devicon-nodejs-plain'
+            },
+            {
+              name: 'Ruby on Rails',
+              icon: 'devicon-rails-plain'
+            },
+            {
+              name: 'REST API',
+              icon: 'devicon-digitalocean-plain'
+            },
+          ],
         },
         database: {
           label: 'Database',
-          list: ['PostgreSql', 'MySQL'],
+          list: [
+            {
+              name: 'PostgreSql',
+              icon: 'devicon-postgresql-plain'
+            },
+            {
+              name: 'MySQL',
+              icon: 'devicon-mysql-plain'
+            },
+          ],
         },
         others: {
           label: 'Others',
-          list: ['Git', 'AWS', 'DigitalOcean'],
+          list: [
+            {
+              name: 'Git',
+              icon: 'devicon-git-plain'
+            },
+            {
+              name: 'AWS',
+              icon: 'devicon-amazonwebservices-plain'
+            },
+            {
+              name: 'DigitalOcean',
+              icon: 'devicon-digitalocean-plain'
+            },
+          ],
         },
       },
     }
@@ -75,7 +147,6 @@ export default defineComponent({
 
   transform: rotateX(45deg) rotateZ(45deg) translateZ(0);
 
-
   @for $i from 1 through 11 {
     &:nth-child(#{$i}) {
       z-index: #{11 - $i};
@@ -86,16 +157,15 @@ export default defineComponent({
     transform: translateY(-70px) rotateX(0deg) rotateZ(0deg) translateZ(4rem)
       scale(1.7);
     z-index: 30;
-    
+
     &::after {
       content: '';
       @apply absolute h-40 w-full bottom-0 transform scale-125;
-
     }
   }
 
   .skill-box {
-    @apply bg-gray-700 dark:bg-gray-400 text-gray-100 dark:text-gray-800 font-montserrat w-36 h-36 rounded-lg flex items-end border-2 border-white absolute left-0 bottom-0;
+    @apply bg-gray-700 dark:bg-gray-400 text-gray-100 dark:text-gray-800 font-montserrat w-36 h-36 rounded-lg flex flex-col items-center justify-end border-2 border-white absolute left-0 bottom-0;
 
     box-shadow: 20px 18px 10px 0 rgb(0 0 0 / 15%);
 
@@ -107,6 +177,13 @@ export default defineComponent({
     }
     &.backend {
       @apply bg-gray-500 dark:bg-gray-300;
+    }
+
+    .devicon-icon {
+      @apply w-20 h-20 text-white dark:text-gray-900;
+       &::before {
+        @apply text-6xl;
+      }
     }
   }
 }

@@ -7,9 +7,9 @@ module.exports = {
       montez: ['Montez', 'cursive']
     },
     animation: {
-      'fill-right': 'fill-right 2s forwards 4s ease-in-out',
-      'fill-top': 'fill-top 2s forwards 4s ease-in-out',
-      'fill-left': 'fill-left 2s forwards 4s ease-in-out',
+      'fill-right': 'fill-right 2s forwards 0.5s ease-in-out',
+      'fill-top': 'fill-top 2s forwards 0.5s ease-in-out',
+      'fill-left': 'fill-left 2s forwards 0.5s ease-in-out',
       'fade-in': 'fade-in 1.5s ease-in-out',
       'dash': 'dash 15s ease-in-out infinite',
     },

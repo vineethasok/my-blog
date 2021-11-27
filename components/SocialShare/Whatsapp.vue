@@ -42,7 +42,7 @@ export default defineComponent({
   setup(props) {
     const route = useRoute()
     return {
-      currentUrl: `whatsapp://send?text=${props.title}%20${route.value.fullPath}`,
+      currentUrl: `whatsapp://send?text=${props.title}%0Ahttps://www.vineethasok.com${route.value.path}`,
     };
   },
 })

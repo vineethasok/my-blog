@@ -45,7 +45,7 @@ export default defineComponent({
   setup(props) {
     const route = useRoute()
     return {
-      currentUrl: `https://reddit.com/submit/?url=${route.value.fullPath}&resubmit=true&title=${props.title}`
+      currentUrl: `https://reddit.com/submit/?url=https://www.vineethasok.com${route.value.path}&resubmit=true&title=${props.title}`
     };
   }
 })

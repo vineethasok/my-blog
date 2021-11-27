@@ -4,7 +4,12 @@
       <h1 class="text-2xl font-bold font-montez mt-10 text-4xl text-center">
         Timeline
       </h1>
-      <div v-for="bio in bios" :key="bio.orgName" class="timeline-event">
+      <div
+        v-for="bio in bios"
+        :key="bio.orgName"
+        class="timeline-event"
+        v-animate-on-scroll
+      >
         <div class="timeline-event-icon">
           <i :data-feather="bio.icon" class="text-white"></i>
         </div>
@@ -34,7 +39,14 @@
               <li
                 v-for="(technology, techIndex) in bio.technologies"
                 :key="techIndex"
-                class="border border-blue-300 rounded-full px-4 py-1 text-sm shadow-inner"
+                class="
+                  border border-blue-300
+                  rounded-full
+                  px-4
+                  py-1
+                  text-sm
+                  shadow-inner
+                "
               >
                 {{ technology }}
               </li>
@@ -42,7 +54,7 @@
           </div>
         </div>
       </div>
-      <div class="timeline-event">
+      <div class="timeline-event" v-animate-on-scroll>
         <div class="timeline-event-icon">
           <i data-feather="book-open" class="text-white"></i>
         </div>
@@ -111,7 +123,7 @@ export default {
             'PrawnPdf',
             'Puppeteer',
           ],
-          link: 'http://arctype.com/',
+          link: 'https://cvfactory.io/',
         },
         {
           orgName: 'Seabookings',
@@ -184,9 +196,6 @@ export default {
     @apply ml-auto relative flex self-center m-4 my-4 flex-col w-full;
 
     border-radius: 6px;
-    &.enter {
-      @apply animate-fade-in;
-    }
 
     &-sidebar {
       @apply flex items-center justify-between flex-col p-4 bg-gray-200 text-blue-500 dark:bg-gray-600 font-semibold;
@@ -239,7 +248,7 @@ export default {
           0 18px 36px -18px rgba(0, 0, 0, 0.3),
           0 -12px 36px -8px rgba(0, 0, 0, 0.025);
         &::after {
-          @apply absolute w-full left-0 bg-blue-500 dark:bg-gray-600 animate-fill-left;
+          @apply absolute w-full left-0 bg-blue-500 dark:bg-gray-600;
 
           content: '';
           height: 2px;
@@ -254,27 +263,29 @@ export default {
       }
 
       &::before {
+        @apply absolute bg-blue-500 dark:bg-gray-600 top-1/2;
+
         content: '';
         width: 2px;
         height: 0%;
-        @apply absolute bg-blue-500 dark:bg-gray-600;
-
-        top: 50%;
         z-index: -1;
         left: 60px;
         transform: translateX(-50%);
-        @apply animate-fill-top;
+      }
+
+      &.enter {
+        .timeline-event-icon::after {
+          @apply animate-fill-left;
+        }
+        &::before {
+          @apply animate-fill-top;
+        }
       }
 
       &:nth-child(2n + 1) {
         @apply flex-row-reverse;
         .timeline-event-icon::after {
-          @apply animate-fill-right absolute w-full right-0 left-auto top-1/2 bg-blue-500 dark:bg-gray-600;
-
-          content: '';
-          height: 2px;
-          z-index: -1;
-          transform: translateY(-50%);
+          @apply right-0 left-auto;
         }
         &::before {
           @apply absolute bg-blue-500 dark:bg-gray-600 top-1/2 left-auto;
@@ -285,7 +296,6 @@ export default {
           right: 60px;
           z-index: -1;
           transform: translateX(-50%);
-          @apply animate-fill-top;
         }
         .timeline-event-sidebar {
           @apply rounded-none rounded-r-md;
@@ -294,6 +304,10 @@ export default {
         .timeline-event-content {
           @apply rounded-none rounded-l-md;
         }
+      }
+
+      &.enter:nth-child(2n + 1) .timeline-event-icon::after {
+        @apply animate-fill-right;
       }
     }
 

@@ -47,7 +47,7 @@ export default defineComponent({
   setup(props) {
     const route = useRoute()
     return {
-      currentUrl: `https://www.tumblr.com/widgets/share/tool?posttype=link&title=${props.title}&caption=${props.title}&content=${route.value.fullPath}&canonicalUrl=${route.value.fullPath}&shareSource=tumblr_share_button`,
+      currentUrl: `https://www.tumblr.com/widgets/share/tool?posttype=link&title=${props.title}&caption=${props.title}&content=https://www.vineethasok.com${route.value.path}&canonicalUrl=https://www.vineethasok.com${route.value.path}&shareSource=tumblr_share_button`,
     }
   },
 })

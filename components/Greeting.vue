@@ -14,6 +14,7 @@
       <h2 class="hi">Hi, I'am</h2>
       <h1
         class="
+          hi
           text-3xl
           sm:text-5xl
           text-center
@@ -77,7 +78,7 @@
         >
       </div>
     </div>
-    <div class="w-full sm:w-1/2 text-right float-right mt-8 sm:mt-0">
+    <div class="svg" v-animate-on-scroll>
       <ProgrammingSvg />
     </div>
   </section>
@@ -101,12 +102,9 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang='scss' scoped>
 h1 {
   stroke: #182838;
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 1000;
-  animation: handwritingAnimation 1s linear forwards;
 }
 
 .hi {
@@ -114,11 +112,13 @@ h1 {
 
   letter-spacing: 0.25rem;
   font-weight: 700;
-  text-shadow: 2px 2px 4px #000;;
+  text-shadow: 2px 2px 4px #000;
 }
-@keyframes handwritingAnimation {
-  to {
-    stroke-dashoffset: 0;
+
+.svg {
+  @apply w-full sm:w-1/2 text-right float-right mt-8 sm:mt-0 sm:mr-3;
+  &.enter {
+    @apply animate-fade-in;
   }
 }
 </style>

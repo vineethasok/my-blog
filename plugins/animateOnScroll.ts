@@ -1,6 +1,6 @@
 import Vue from 'vue'
 
-const animateOnScrollObserver = new IntersectionObserver(
+const animateOnScrollObserver = () => new IntersectionObserver(
   (entries, animateOnScrollObserver) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -14,6 +14,6 @@ const animateOnScrollObserver = new IntersectionObserver(
 Vue.directive('animate-on-scroll', {
   bind: el => {
     el.classList.add('before-enter')
-    animateOnScrollObserver.observe(el)
+    animateOnScrollObserver().observe(el)
   }
 })

@@ -33,7 +33,7 @@ export default defineComponent({
   setup(props) {
     const route = useRoute()
     return {
-      currentUrl: `https://www.linkedin.com/shareArticle?mini=true&url=${route.value.fullPath}&title=${props.title}&summary=${props.title}&source=${route.value.fullPath}`,
+      currentUrl: `https://www.linkedin.com/shareArticle?mini=true&url=https://www.vineethasok.com${route.value.path}&title=${props.title}&summary=${props.title}&source=https://www.vineethasok.com${route.value.path}`,
     }
   },
 })
